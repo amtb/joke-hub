@@ -1,12 +1,12 @@
 import {App, JokeController, SlackNotifier} from './app';
+import {config} from './config';
 
-const webhookUrl = 'https://hooks.slack.com/services/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';
 // target = '30 8-17 * * 0-4'
-const slackNotifier = new SlackNotifier(webhookUrl, '*/10 * * * * *');
+const slackNotifier = new SlackNotifier(config.slack.webhook, config.slack.cronTime);
 slackNotifier.run();
 
 const app = new App([
-  // new JokeController()
+  new JokeController()
 ]);
 
-app.listen(6666);
+app.listen(config.port);
