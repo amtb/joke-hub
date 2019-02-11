@@ -2,14 +2,14 @@
   "name": "joke-hub",
   "version": "0.0.0",
   "description": "Joke API",
-  "main": "index.js",
+  "main": "dist/server.js",
   "author": "abarry",
   "license": "MIT",
   "private": true,
   "scripts": {
     "watch": "nodemon",
-    "bundle": "tsc",
-    "lint": "tslint --project tsconfig.json --config tslint.json"
+    "lint": "tslint --project tsconfig.json --config tslint.json",
+    "postinstall": "tsc"
   },
   "husky": {
     "hooks": {
