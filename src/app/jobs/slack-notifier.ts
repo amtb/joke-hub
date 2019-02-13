@@ -1,7 +1,7 @@
 import {CronJob} from 'cron';
 import fetch from 'node-fetch';
 
-import { API, ChuckNorrisApi, DadJokeApi, DKatzApi } from '../apis';
+import { API, ChuckNorrisApi, DadJokeApi, DKatzApi, INCDBApi } from '../apis';
 
 export class SlackNotifier {
   private webhookUrl: string;
@@ -9,8 +9,9 @@ export class SlackNotifier {
   private cronJob: CronJob;
 
   private apis: Array<API<any>> = [
-    new DKatzApi(),
     new ChuckNorrisApi(),
+    new DKatzApi(),
+    new INCDBApi(),
     new DadJokeApi()
   ];
 

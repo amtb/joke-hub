@@ -3,6 +3,7 @@ Aggregates jokes from
 
 - icanhazdadjoke https://icanhazdadjoke.com/
 - icndb: http://www.icndb.com/api/
+- chucknorris https://api.chucknorris.io/
 - David Katz jokes https://github.com/15Dkatz/official_joke_api
 
 and serves as a hub.
@@ -17,5 +18,6 @@ For more about cron time see https://crontab.guru/
 Target one of the following 
 - localhost:6666/joke/dad
 - localhost:6666/joke/dkatz
+- localhost:6666/joke/icndb
 - localhost:6666/joke/chuck-norris
 
